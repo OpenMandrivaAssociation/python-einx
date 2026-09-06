@@ -16,6 +16,11 @@ Requires:	python%{pyver}dist(numpy)
 Requires:	python%{pyver}dist(sympy)
 Requires:	python%{pyver}dist(frozendict)
 
+# setuptools.packages.find only excludes test_typechecking*, so
+# test/ and docs/ land in site-packages. Drop them after install.
+%install -a
+rm -rf %{buildroot}%{py_sitedir}/test %{buildroot}%{py_sitedir}/docs
+
 %description
 einx provides a universal notation for tensor operations, similar to
 einops. Required by vector-quantize-pytorch (ACE-Step FSQ tokenizer).
