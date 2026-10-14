@@ -1,6 +1,6 @@
 Name:		python-einx
 Version:	0.4.3
-Release:	1
+Release:	2
 Summary:	Universal numpy-style tensor operations
 License:	MIT
 Group:		Development/Python
@@ -9,7 +9,7 @@ Source0:	https://files.pythonhosted.org/packages/source/e/einx/einx-%{version}.t
 BuildArch:	noarch
 BuildSystem:	python
 BuildRequires:	python
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(setuptools)
 Requires:	python%{pyver}dist(numpy)
